@@ -5,10 +5,15 @@
 goes in `/etc/ssh/sshrc`
 
 IP needs to be set to group subnet
+
 discbin path needs to be set
 
+webhook url needs to be set
+
 .ssh/config of connecting host:
+
 RemoteCommand bash --noprofile
+
 RequestTTY force
 
 uses discbin: https://github.com/thief-adj/discbin
