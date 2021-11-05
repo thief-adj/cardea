@@ -1,6 +1,7 @@
 #!/bin/bash
 uniqpeers=$(ss | grep ssh | awk '{ print $6 }' | grep -v 10.51.00.)
-webhookurl=[url goes here]
+discbin='/home/blueteam/discbin/discbin https://discord.com/api/webhooks/example'
 
 if [ -n "$uniqpeers" ]; then
-        echo Suspicious SSH login detected on $(hostname) from $uniqpeers. | /home/blueteam/discbin/discbin $webhookurl
+        echo Suspicious SSH login detected on $(hostname) from $uniqpeers. | $discbin
+fi
